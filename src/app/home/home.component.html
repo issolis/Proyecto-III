@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button-container">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+        <button>Botón 4</button>
+        <button (click)="sendInformation()">Run</button>
+      </div>    
+      <div class="container">
+        <div class="file-tree-section">
+          <h2>File Tree</h2>
+          <!-- Contenido del File Tree -->
+        </div>
+        <div class="textarea-container">
+          <textarea [(ngModel)]="fileTree"></textarea>
+        </div>        
+      </div>
+      <div *ngFor="let item of data">
+  <p>Name: {{ item.name }}</p>
+  <p>ID: {{ item.id }}</p>
+</div>
+</body>
+</html>
