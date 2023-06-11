@@ -24,6 +24,12 @@ export class HomeComponent {
       }
     }*/
     this.apiService.sendData(this.fileTree).subscribe(response => {
+      for (let item of response) {
+        for (let key in item) {
+          console.log(key + ": " + item[key]);
+        }
+      }
+      this.data=response;
       console.log(response);
     });
   }
@@ -31,11 +37,7 @@ export class HomeComponent {
     this.llenarData();
   }
   llenarData(){
-    this.apiService.urlApi="http://localhost:8080/"
-    this.apiService.getData().subscribe(data =>{
-      this.data=data; 
-      console.log(this.data); 
-    });
+   
     this.apiService.urlApi="http://localhost:8080/endpoint";
  
   }

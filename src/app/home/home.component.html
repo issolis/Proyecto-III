@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+  <div class="container">
+  <input type="text" placeholder="Correo electrónico" style="padding: 10px; margin: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;">
+  <input type="password" placeholder="Contraseña" style="padding: 10px; margin: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;">
+  <button class="button" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; margin: 10px; cursor: pointer;">Sign In</button>
+  <button class="button" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 4px; margin: 10px; cursor: pointer;">Login</button>
+</div>
+
+  
     <div class="button-container">
         <button>Botón 1</button>
         <button>Botón 2</button>
@@ -23,9 +31,10 @@
           <textarea [(ngModel)]="fileTree"></textarea>
         </div>        
       </div>
+      
       <div *ngFor="let item of data">
-  <p>Name: {{ item.name }}</p>
-  <p>ID: {{ item.id }}</p>
+  <p>{{ item.resp }}</p>
+ 
 </div>
 </body>
 </html>
